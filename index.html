@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memcard</title>
+    <link rel="stylesheet" href="./build/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <div class="top">
+        <div class="top__left">
+            <div class="top__left__schedule">
+                Список студентов
+            </div>
+            <div class="top__left__group">
+                МТ-202
+            </div>
+        </div>
+        <div class="top__right">
+            <button><i class="fas fa-print"></i>Распечатать</button>
+        </div>
+    </div>
+</header>
+<main>
+<div class="groups">
+    <a href="#"><i class="fas fa-long-arrow-alt-left"></i>Вернуться к списку групп</a>
+</div>
+<div class="student" id="student"></div>
+<div class="main">
+    <div class="main__list">
+        <div class="main__list__new">
+            <button><i class="fas fa-plus"></i> Добавить студента</button>
+        </div>
+        <div class="main__list__save">
+            <button><i class="fas fa-check"></i>Сохранить изменения</button>
+        </div>
+        <ul class="main__list__names" id="list">
+            <li onclick="renderName(this)">Константинопольський Константин Константинович</li>
+            <li onclick="renderName(this)">Берестова Екатерина Викторовна</li>
+            <li onclick="renderName(this)">Ведерников Андрей Андреевич</li>
+            <li onclick="renderName(this)">Виноградова Юлия Евгениевна</li>
+            <li onclick="renderName(this)">Воронцов Максим Николаевич</li>
+            <li onclick="renderName(this)">Зубков Александр Егорович</li>
+            <li onclick="renderName(this)">Иванов Сергей Вячеславович</li>
+            <li onclick="renderName(this)">Киржавина Александра Сергеевна</li>
+            <li onclick="renderName(this)">Корнеева Марина Александровна</li>
+            <li onclick="renderName(this)">Махотин Иван Вадимович</li>
+            <li onclick="renderName(this)">Некрасов Алексей Викторович</li>
+            <li onclick="renderName(this)">Солдатова Александра Ивановна</li>
+            <li onclick="renderName(this)">Юркин Виктор Юрьевич</li>
+        </ul>
+    </div>
+    <div class="main__form">
+        <form action="index.html" class="main__form__survey">
+            <div class="main__form__survey__head">
+                <div class="main__form__survey__head__text">
+                    Стандартные личные данные
+                </div>
+                <div class="main__form__survey__head__delete">
+                    Удалить
+                </div>
+            </div>
+            <div class="main__form__survey__container">
+                <div class="main__form__survey__container__row">
+                    <div class="main__form__survey__container__row__left">
+                        <label for="name">Фамилия</label>
+                    </div>
+                    <div class="main__form__survey__container__row__right">
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                </div>
+                <div class="main__form__survey__container__row">
+                    <div class="main__form__survey__container__row__left">
+                        <label for="name">Имя</label>
+                    </div>
+                    <div class="main__form__survey__container__row__right">
+                        <input type="text" name="name" id="surname" required>
+                    </div>
+                </div>
+                <div class="main__form__survey__container__row">
+                    <div class="main__form__survey__container__row__left">
+                        <label for="name">Отчество</label>
+                    </div>
+                    <div class="main__form__survey__container__row__right">
+                        <input type="text" name="name" required>
+                    </div>
+                </div>
+                <div class="main__form__survey__container__row">
+                    <div class="main__form__survey__container__row__left">
+                        Пол
+                    </div>
+                    <div class="main__form__survey__container__row__right__gender">
+                        <ul class="main__form__survey__container__row__right__gender__radio">
+                            <li class="main__form__survey__container__row__right__gender__radio__button">
+                                <label><input name="radio-buttons" value="1" type="radio">Мужской</label>
+                            </li>
+                            <li class="main__form__survey__container__row__right__gender__radio__button">
+                                <label><input name="radio-buttons" value="2" type="radio">Женский</label>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__form__survey__container__row">
+                    <div class="main__form__survey__container__row__left">
+                        <label>Дата рождения</label>
+                    </div>
+                    <div class="main__form__survey__container__row__right">
+                        <input type="date" name="date">
+                    </div>
+                </div>
+                <div class="main__form__survey__container__row">
+                    <div class="main__form__survey__container__row__left">
+                        <label>Дата поступления</label>
+                    </div>
+                    <div class="main__form__survey__container__row__right">
+                        <input type="date" name="date">
+                    </div>
+                </div>
+            </div>
+            <div class="main__form__checkboxes">
+                <div class="main__form__checkboxes__head">
+                    <div class="main__form__checkboxes__head__list">
+                        Списочек посещаемых предметов
+                    </div>
+                    <div class="main__form__checkboxes__head__add">
+                        Добавить предмет
+                    </div>
+                </div>
+                <div class="main__form__checkboxes__boxes">
+                    <ul class="main__form__checkboxes__boxes__box">
+                        <li><input type="checkbox" name="name1">Первый вариант</li>
+                        <li><input type="checkbox" name="name2">Второй вариант</li>
+                        <li><input type="checkbox" name="name3">Третий вариант</li>
+                    </ul>
+                    <ul class="main__form__checkboxes__boxes__box">
+                        <li><input type="checkbox" name="name1">Первый вариант</li>
+                        <li><input type="checkbox" name="name2">Второй вариант</li>
+                        <li><input type="checkbox" name="name3">Третий вариант</li>
+                    </ul>
+                    <ul class="main__form__checkboxes__boxes__box">
+                        <li><input type="checkbox" name="name1">Первый вариант</li>
+                        <li><input type="checkbox" name="name2">Второй вариант</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="schedule">
+    <div id="piechart"></div>
+</div>
+</main>
+<script src="build/js/all.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+</html>
+

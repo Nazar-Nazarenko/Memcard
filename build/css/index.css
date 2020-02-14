@@ -1,0 +1,188 @@
+ul {
+  list-style-type: none; }
+
+a {
+  color: blue; }
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(grey));
+  background-image: -webkit-linear-gradient(white, grey);
+  background-image: linear-gradient(white, grey); }
+
+.top {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 20px 25px;
+  border-bottom: 6px solid blue;
+  box-sizing: border-box; }
+  .top__left {
+    display: -webkit-box;
+    display: flex; }
+    .top__left__schedule {
+      padding-right: 25px;
+      font-weight: normal;
+      font-size: 32px;
+      margin-left: 10px; }
+    .top__left__group {
+      font-size: 18px;
+      margin-top: 12px; }
+  .top__right {
+    margin-top: 12px; }
+    .top__right button {
+      border-radius: 3px;
+      box-shadow: 1px 2px 3px grey;
+      border: 0px;
+      padding: 4px 7px;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(lightgrey));
+      background-image: -webkit-linear-gradient(white, lightgrey);
+      background-image: linear-gradient(white, lightgrey);
+      word-spacing: 5px; }
+
+.groups {
+  padding: 20px 25px; }
+
+.student {
+  display: -webkit-box;
+  display: flex;
+  padding: 10px 20px 20px 10px;
+  margin: 0 25px;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 24px; }
+
+.main {
+  display: -webkit-box;
+  display: flex;
+  padding: 10px 25px; }
+  .main__list {
+    width: 20%; }
+    .main__list__names {
+      margin-right: -27px; }
+      .main__list__names li {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 10px 30px 10px 20px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        z-index: 3;
+        color: blue;
+        text-decoration: underline; }
+      .main__list__names li:hover {
+        background-color: white; }
+    .main__list__new button {
+      width: 160px;
+      padding: 5px 0;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      border: 0px;
+      box-shadow: 1px 3px 3px grey; }
+    .main__list__new button:hover {
+      background-color: white; }
+    .main__list__save button {
+      width: 160px;
+      padding: 5px 0;
+      border-radius: 5px;
+      border: 0px;
+      color: white;
+      background-color: blue;
+      box-shadow: 1px 3px 3px grey;
+      margin-bottom: 10px; }
+    .main__list__save button:hover {
+      background-color: deepskyblue; }
+  .main__form {
+    width: 80%;
+    background-color: white;
+    padding: 20px 15px;
+    border: 1px solid silver;
+    box-shadow: 1px 1px 2px lightslategrey;
+    border-radius: 3px; }
+    .main__form__survey__head {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      padding: 10px; }
+      .main__form__survey__head__text {
+        font-size: 24px; }
+      .main__form__survey__head__delete {
+        color: blue;
+        text-decoration: underline; }
+    .main__form__survey__container {
+      width: 400px; }
+      .main__form__survey__container__row {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between; }
+        .main__form__survey__container__row__left {
+          padding: 10px 15px; }
+        .main__form__survey__container__row__right {
+          padding: 10px 15px; }
+          .main__form__survey__container__row__right input {
+            width: 200px;
+            padding: 3px 0;
+            border-radius: 2px;
+            border: 1px solid lightgray;
+            box-shadow: 1px 1px 1px lightslategrey; }
+          .main__form__survey__container__row__right__gender__radio {
+            display: -webkit-box;
+            display: flex; }
+            .main__form__survey__container__row__right__gender__radio__button {
+              padding-right: 28px; }
+    .main__form__checkboxes {
+      padding: 15px;
+      margin-top: 25px;
+      border-top: 1px solid lightgray; }
+      .main__form__checkboxes__head {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between; }
+        .main__form__checkboxes__head__list {
+          font-size: 25px; }
+        .main__form__checkboxes__head__add {
+          text-decoration: underline;
+          color: blue; }
+      .main__form__checkboxes__boxes {
+        display: -webkit-box;
+        display: flex;
+        justify-content: space-around; }
+        .main__form__checkboxes__boxes__box li {
+          padding: 10px; }
+
+@media screen and (max-width: 768px) {
+  .top {
+    -webkit-box-pack: center;
+    justify-content: center; }
+    .top__left__group {
+      padding: 10px 15px; }
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column; }
+    .main__list {
+      width: 100%; }
+      .main__list__names {
+        margin-right: 0;
+        margin-left: -35px; }
+    .main__form {
+      width: 100%;
+      margin-left: -15px; }
+      .main__form__checkboxes__boxes {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-flow: column; }
+      .main__form__survey__container {
+        width: 100%; }
+        .main__form__survey__container__row__right input {
+          width: 100%; }
+        .main__form__survey__container__row__right__gender__radio__button {
+          padding-right: 8px; } }
+
+@media screen and (min-width: 769px) {
+  .main__form {
+    margin-left: 25px; } }
